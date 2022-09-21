@@ -1,9 +1,10 @@
 import React from "react";
 
-const TituloPrincipal = ({tituloNuevo}) => {
+const TituloPrincipal = ({tituloNuevo,fraseNueva}) => {
   return (
     <>
-      <h1>{tituloNuevo}</h1>
+      <h1>{tituloNuevo}{fraseNueva}</h1>
+      <button>Click</button>
     </>
   );
 };
