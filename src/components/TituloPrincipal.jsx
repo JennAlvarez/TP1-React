@@ -4,7 +4,7 @@ const TituloPrincipal = (props) => {
   
   const[fraseButton, setfraseButton] = useState("Hello my friend!")
 
-  const cambiarNombre = () =>{
+  const cambiarFrase = () =>{
     console.log('desde button');
     setfraseButton('Hello my friend (from changed stated)!')
   }
@@ -12,7 +12,7 @@ const TituloPrincipal = (props) => {
   return (
     <>
       <h1>{fraseButton}</h1>
-      <button onClick={e => cambiarNombre('Hello my friend (from changed state)!')}>Click</button>
+      <button onClick={cambiarFrase}>Click</button>
     </>
   );
 };
