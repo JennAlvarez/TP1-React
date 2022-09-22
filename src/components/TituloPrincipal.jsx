@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 
-const TituloPrincipal = ({tituloNuevo,fraseNueva}) => {
+const TituloPrincipal = (props) => {
+  
+  const[fraseButton, setfraseButton] = useState("Hello my friend!")
+
+  const cambiarNombre = () =>{
+    console.log('desde button');
+    setfraseButton('Hello my friend (from changed stated)!')
+  }
+
   return (
     <>
-      <h1>{tituloNuevo}{fraseNueva}</h1>
-      <button>Click</button>
+      <h1>{fraseButton}</h1>
+      <button onClick={e => cambiarNombre('Hello my friend (from changed state)!')}>Click</button>
     </>
   );
 };
